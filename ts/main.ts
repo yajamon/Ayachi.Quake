@@ -22,6 +22,8 @@ function isError(data:any):boolean{
 }
 
 var testTweetId = '515004471521185792';
-twit.post('/statuses/retweet/'+testTweetId+'.json', {}, function (data) {
+var targetTweetId = testTweetId;
+
+twit.post('/statuses/retweet/'+targetTweetId+'.json', {}, function (data:any) {
     console.log(data);
 });
