@@ -9,6 +9,7 @@ var twit = new twitter({
     access_token_secret: Setting.ACCESS_TOKEN_SECRET
 });
 
-twit.post('/statuses/update.json', {status : "Test tweet by API"}, function (data) {
+var testTweetId = '515004471521185792';
+twit.post('/statuses/retweet/'+testTweetId+'.json', {}, function (data) {
     console.log(data);
 });
