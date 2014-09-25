@@ -33,5 +33,8 @@ twit.get('/statuses/show/'+targetTweetId+'.json',{include_my_retweet: true}, fun
 });
 
 twit.post('/statuses/retweet/'+targetTweetId+'.json', {}, function (data:any) {
+    if(isError(data)) {
+        return;
+    }
     console.log(data);
 });
