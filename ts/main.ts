@@ -24,6 +24,14 @@ function isError(data:any):boolean{
 var testTweetId = '515004471521185792';
 var targetTweetId = testTweetId;
 
+// RT対象ツイートをチェック
+twit.get('/statuses/show/'+targetTweetId+'.json',{include_my_retweet: true}, function(data:any){
+    if(isError(data)) {
+        return;
+    }
+    console.log(data);
+});
+
 twit.post('/statuses/retweet/'+targetTweetId+'.json', {}, function (data:any) {
     console.log(data);
 });
