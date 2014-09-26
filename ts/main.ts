@@ -21,15 +21,15 @@ function isError(data:any):boolean{
     }
 }
 
-var testTweetId = '515004471521185792';
-var targetTweetId = testTweetId;
+var testTweetId:string = '515004471521185792';
+var targetTweetId:string = testTweetId;
 
 // RT対象ツイートをチェック
-twit.get('/statuses/show/'+targetTweetId+'.json',{include_my_retweet: true}, function(data:any){
-    if(isError(data)) {
+twit.get('/statuses/show/'+targetTweetId+'.json',{include_my_retweet: true}, function(targetData:any){
+    if(isError(targetData)) {
         return;
     }
-    console.log(data);
+    console.log(targetData);
 });
 
 twit.post('/statuses/retweet/'+targetTweetId+'.json', {}, function (data:any) {
