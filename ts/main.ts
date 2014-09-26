@@ -39,10 +39,19 @@ twit.get('/statuses/show/'+targetTweetId+'.json',{include_my_retweet: true}, fun
             console.log(retweetedData);
 
             // RT時間取得
+            var RetweetTime:Date = new Date(retweetedData.created_at);
             // インターバル設定
+            var interval:number = 5 /* min */ * 60 * 1000;
 
             // RTからの経過時間取得
+            var now:Date = new Date();
+            var elapsed:number = now.getTime() - RetweetTime.getTime();
+
             // インターバルを過ぎているならばRTを削除
+            if(elapsed > interval) {
+                twit.post('/statuses/destroy'+RetweetedId+'.json', {}, function(destroiedData){
+                });
+            }
         });
     } else {
         // RT
