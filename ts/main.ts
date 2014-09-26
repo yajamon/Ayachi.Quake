@@ -37,6 +37,12 @@ twit.get('/statuses/show/'+targetTweetId+'.json',{include_my_retweet: true}, fun
         twit.get('/statuses/show/'+RetweetedId+'.json',{include_my_retweet: true}, function(retweetedData:any){
             console.log('Retweeted');
             console.log(retweetedData);
+
+            // RT時間取得
+            // インターバル設定
+
+            // RTからの経過時間取得
+            // インターバルを過ぎているならばRTを削除
         });
     } else {
         // RT
