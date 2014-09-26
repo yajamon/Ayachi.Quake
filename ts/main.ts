@@ -34,7 +34,7 @@ twit.get('/statuses/show/'+targetTweetId+'.json',{include_my_retweet: true}, fun
     if(targetData.current_user_retweet.id_str) {
         // RT済みならばRTを取得
         var RetweetedId:string = targetData.current_user_retweet.id_str;
-        twit.get('/statuses/show/'+RetweetedId+'.json',{include_my_retweet: true}, function(retweetedData:any){
+        twit.get('/statuses/show/'+RetweetedId+'.json',{}, function(retweetedData:any){
             console.log('Retweeted');
             console.log(retweetedData);
 
