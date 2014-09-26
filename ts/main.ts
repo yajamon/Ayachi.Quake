@@ -49,7 +49,8 @@ twit.get('/statuses/show/'+targetTweetId+'.json',{include_my_retweet: true}, fun
 
             // インターバルを過ぎているならばRTを削除
             if(elapsed > interval) {
-                twit.post('/statuses/destroy'+RetweetedId+'.json', {}, function(destroiedData){
+                twit.post('/statuses/destroy/'+RetweetedId+'.json', {}, function(destroiedData){
+                    console.log(destroiedData);
                 });
             }
         });
