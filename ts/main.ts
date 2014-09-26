@@ -30,6 +30,15 @@ twit.get('/statuses/show/'+targetTweetId+'.json',{include_my_retweet: true}, fun
         return;
     }
     console.log(targetData);
+
+    // RT済み
+    if(targetData.current_user_retweet.id_str) {
+        var RetweetedId:string = targetData.current_user_retweet.id_str;
+        twit.get('/statuses/show/'+RetweetedId+'.json',{include_my_retweet: true}, function(retweetedData:any){
+            console.log('Retweeted');
+            console.log(retweetedData);
+        });
+    }
 });
 
 twit.post('/statuses/retweet/'+targetTweetId+'.json', {}, function (data:any) {
