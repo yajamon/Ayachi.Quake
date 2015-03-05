@@ -25,7 +25,7 @@ var testTweetId:string = '515004471521185792';
 var targetTweetId:string = testTweetId;
 
 // RT対象ツイートをチェック
-twit.get('/statuses/show/'+targetTweetId+'.json',{include_my_retweet: true}, function(targetData:any){
+twit.get('/statuses/show/'+targetTweetId+'.json',{include_my_retweet: true}, function(error:any, tweets:any, targetData:any){
     if(isError(targetData)) {
         return;
     }
