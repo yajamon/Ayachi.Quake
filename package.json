@@ -1,0 +1,19 @@
+{
+  "name": "Ayachi.Quake",
+  "version": "0.0.1",
+  "description": "Ayachi.Quake\r ============",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://yajamon@github.com/yajamon/Ayachi.Quake.git"
+  },
+  "author": "yajamon <yajamon.tatsuki@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yajamon/Ayachi.Quake/issues"
+  },
+  "homepage": "https://github.com/yajamon/Ayachi.Quake"
+}
