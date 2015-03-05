@@ -1,7 +1,7 @@
 class Setting {
 
-    static final API_KEY = 'xxx';
-    static final API_SECRET = 'xxx';
-    static final ACCESS_TOKEN  = 'xxx';
-    static final ACCESS_TOKEN_SECRET = 'xxx';
+    static API_KEY:string = 'xxx';
+    static API_SECRET:string = 'xxx';
+    static ACCESS_TOKEN:string  = 'xxx';
+    static ACCESS_TOKEN_SECRET:string = 'xxx';
 }
