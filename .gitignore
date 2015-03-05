@@ -29,4 +29,5 @@ node_modules
 
 # this project ignore files
 ts/*.js
-ts/Setting.ts
+Setting.ts
+
