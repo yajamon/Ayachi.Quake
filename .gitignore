@@ -31,3 +31,5 @@ node_modules
 ts/*.js
 Setting.ts
 
+# build files
+dest
