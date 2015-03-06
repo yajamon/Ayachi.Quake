@@ -21,7 +21,7 @@ function isError(data:any):boolean{
     }
 }
 
-var testTweetId:string = '515004471521185792';
+var testTweetId:string = '573776589315383296';
 var targetTweetId:string = testTweetId;
 
 // RT対象ツイートをチェック
